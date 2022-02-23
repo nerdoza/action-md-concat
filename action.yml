@@ -1,0 +1,23 @@
+name: 'Markdown Concatenate'
+description: 'Performs a concatenation on markdown files.'
+author: 'Zachary Cardoza'
+inputs:
+  srcDir: 
+    description: 'Path to directory of md files to concatenate.'
+    required: true
+  limit: 
+    description: 'Limit concatenation to specified number of files sorted by name. (Leave blank for no limit)'
+    required: false
+  destFile: 
+    description: 'Destination file path for concatenated file, including file name.'
+    required: true
+  separator:
+    description: 'String to use between each concatenated file. (Default is new line character)'
+    required: false
+    default: '\n'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'file-text'  
+  color: 'yellow'
