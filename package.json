@@ -1,6 +1,6 @@
 {
   "name": "action-md-concat",
-  "version": "0.0.1",
+  "version": "v1.0.0",
   "author": "Zachary Cardoza",
   "description": "GitHub Action that performs a concatenation on markdown files.",
   "license": "MIT",

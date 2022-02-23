@@ -30,4 +30,4 @@ This action performs a concatenation on markdown files within a directory.
 **Optional** String to use between each concatenated file.  (Default: `\n`)
 
 ## Copyright and License
-© 2020 Zachary Cardoza under the [MIT license](LICENSE.md).
+© 2022 Zachary Cardoza under the [MIT license](LICENSE.md).
