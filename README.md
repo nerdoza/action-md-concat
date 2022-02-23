@@ -17,17 +17,21 @@ This action performs a concatenation on markdown files within a directory.
 
 **Required** Path to directory of md files to concatenate.
 
-### `limit`
-
-**Optional** 'Limit concatenation to specified number of files sorted by name. (Leave blank for no limit)
-
 ### `destFile`
 
-**Required** 'Destination file path for concatenated file, including file name.'
+**Required** Destination file path for concatenated file, including file name.
+
+### `limit`
+
+**Optional** Limit concatenation to specified number of files sorted by name. (Leave blank for no limit)
+
+### `reverse`
+
+**Optional** Reverse ordering of concatenation to descending. (Leave blank for ascending ordering)
 
 ### `separator`
 
-**Optional** String to use between each concatenated file.  (Default: `\n`)
+**Optional** String to use between each concatenated file. (Default: `\n`)
 
 ## Copyright and License
 © 2022 Zachary Cardoza under the [MIT license](LICENSE.md).

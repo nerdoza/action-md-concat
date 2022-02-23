@@ -4,10 +4,13 @@ import { dirname, join } from 'path'
 import MultiStream from 'multistream'
 import string2fileStream from 'string-to-file-stream'
 
-export default async function ConcatFiles (srcDir: string, destFile: string, limit: string | undefined = undefined, separator: string = `\n`): Promise < void > {
+export default async function ConcatFiles (srcDir: string, destFile: string, limit: string | undefined = undefined, reverse: boolean = false, separator: string = `\n`): Promise < void > {
   const limitNumber = typeof limit === 'string' ? parseInt(limit, 10) : undefined
-  const files = await readdir(srcDir)
-  const filesToConcat = files.filter(file => file.endsWith('.md')).sort().slice(0, limitNumber)
+  let files = (await readdir(srcDir)).filter(file => file.endsWith('.md')).sort()
+  if (reverse) {
+    files = files.reverse()
+  }
+  const filesToConcat = files.slice(0, limitNumber)
 
   const destDir = dirname(destFile)
   await mkdir(destDir, { recursive: true })

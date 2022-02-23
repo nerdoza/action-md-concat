@@ -5,12 +5,15 @@ inputs:
   srcDir: 
     description: 'Path to directory of md files to concatenate.'
     required: true
-  limit: 
-    description: 'Limit concatenation to specified number of files sorted by name. (Leave blank for no limit)'
-    required: false
   destFile: 
     description: 'Destination file path for concatenated file, including file name.'
     required: true
+  limit: 
+    description: 'Limit concatenation to specified number of files sorted by name. (Leave blank for no limit)'
+    required: false
+  reverse: 
+    description: 'Reverse ordering of concatenation to descending. (Leave blank for ascending ordering)'
+    required: false
   separator:
     description: 'String to use between each concatenated file. (Default is new line character)'
     required: false

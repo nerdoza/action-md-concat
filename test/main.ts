@@ -42,8 +42,8 @@ describe('Concat File', function() {
     await ConcatFiles(srcDir, destFile, undefined, '\n#THIS IS A SEPARATOR\n\n\n')
 
     const expectedFileStat = await stat(destFile)
-    expect(expectedFileStat.size).to.be.greaterThanOrEqual(11899)
-    expect(expectedFileStat.size).to.be.lessThanOrEqual(11923)
+    expect(expectedFileStat.size).to.be.greaterThanOrEqual(11785)
+    expect(expectedFileStat.size).to.be.lessThanOrEqual(11785)
   })
 
 })

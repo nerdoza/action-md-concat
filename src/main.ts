@@ -4,11 +4,12 @@ import ConcatFiles from './concat'
 async function run (): Promise < void > {
   try {
     const srcDir = core.getInput('srcDir', { required: true })
-    const limit = core.getInput('limit') || undefined
     const destFile = core.getInput('destFile', { required: true })
+    const limit = core.getInput('limit') || undefined
+    const reverse = core.getInput('reverse') === 'true'
     const separator = core.getInput('separator') + `\n`
 
-    await ConcatFiles(srcDir, destFile, limit, separator)
+    await ConcatFiles(srcDir, destFile, limit, reverse, separator)
 
     core.debug('Markdown concatenation successful.')
   } catch (error) {
