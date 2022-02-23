@@ -14,7 +14,6 @@ inputs:
   separator:
     description: 'String to use between each concatenated file. (Default is new line character)'
     required: false
-    default: '\n'
 runs:
   using: 'node16'
   main: 'dist/index.js'
