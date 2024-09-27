@@ -5,7 +5,7 @@ This action performs a concatenation on markdown files within a directory.
 ## Usage
 ```yml
 - name: Concat document files
-  uses: bayssmekanique/action-md-concat@v1
+  uses: nerdoza/action-md-concat@v1
   with:
     srcDir: ./docs
     destFile: ./fullDoc.md
@@ -34,4 +34,4 @@ This action performs a concatenation on markdown files within a directory.
 **Optional** String to use between each concatenated file. (Default: `\n`)
 
 ## Copyright and License
-© 2022 Zachary Cardoza under the [MIT license](LICENSE.md).
+© 2024 Zachary Cardoza under the [MIT license](LICENSE.md).
