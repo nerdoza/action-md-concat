@@ -27,7 +27,7 @@ jobs:
 
       - name: Create release branch
         if: steps.check.outputs.changed == 'true'
-        uses: peterjgrainger/action-create-branch@v2.0.0
+        uses: peterjgrainger/action-create-branch@v2.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
